@@ -3,9 +3,9 @@ I Once Worked on a Project
 
 Who am I?
 ---------
-Hello, my name is Raz. I'm a software engeneer with 10+ years of experiance.
+Hello, my name is Raz. I'm a software engineer with 10+ years of experience.
 I worked for most of my career in the embedded software world.
-I find this type of programming and software engeneering in general interesting and exiting.
+I find this type of programming, and software engineering in general interesting and exiting.
 
 What this blog is about
 -----------------------
@@ -16,7 +16,7 @@ In this blog I hope to share my point of view, in hope that you will also find i
 Who is it for?
 --------------
 This blog is for any one who is interested in the software world, even not programmers. It is not very technical,
-but I'm using terms that may not be familier to someone that was not exposed in some way to software development.
+but I'm using terms that may not be familiar to someone that was not exposed in some way to software development.
 You don't have to understand everything, and you don't have to read everything. Please ask questions in the comments,
 I'll do my best to answer them.
 
