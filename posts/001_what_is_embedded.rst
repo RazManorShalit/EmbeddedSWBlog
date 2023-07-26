@@ -16,7 +16,7 @@ Where can we find it?
 Well, if you are not from the field, you will be surprised.
 Your home washing machine has some micro-controller in it, which is a type of processor.
 So your washer is an embedded system. You might think “how complicated can a washing machine be?”
-So let me tell you about a time when I had called a repair technician for my washer.
+Well, let me tell you about a time when I had called a repair technician for my washer.
 In order to fix the problem he plugged in a USB disk-on-key that upgraded the washer software,
 copied the log files and sent them to the manufacturer for review.  Of course, it's not just washing machines.
 Refrigerators, air conditioners, cars, cell phone antennas, all have embedded systems.
@@ -24,7 +24,7 @@ Refrigerators, air conditioners, cars, cell phone antennas, all have embedded sy
 Washing machine Vs desktop - Round 1
 ------------------------------------
 Because a CPU is a CPU, whether it is in a computer or a washing machine, programming it should be the same.
-But because a washing machine is not a computer, there are some differences.
+But since a washing machine is not a computer, there are some differences.
 
 Operating System
 ^^^^^^^^^^^^^^^^
@@ -54,12 +54,12 @@ that result in a sub-optimal machine code.
 
 Hardware
 ^^^^^^^^
-The final difference I want to present is the hardware. In a regular computer,
+The final difference I would like to present is the hardware. In a regular computer,
 accessing hardware components such as the disk, or a network interface,
 is done with the help of the OS using it’s drivers. 
 That is possible because standard computer hardware is very generic and in use by all computers.
 That way, the OS can have an hardware-accessing code that will work with most common hardware.
-Now imagine your car breaking system. It has a very specific hardware. Specific for this particular car model.
+Now imagine your car breaking system. It has a very specific hardware, specific for this particular car model.
 You will have to write the HW access code (the “driver”) yourself.
 That requires your programming language to be very “low level”.
 It will be necessary for the language to have a syntax that allows you to access very specific memory addresses
@@ -83,7 +83,7 @@ They buy them from someone with a CPU development expertise. Why shouldn't you b
 You may think it's expensive, manufacturing takes time, or that is complicated to use.
 That was maybe true 20 years ago. Today you can buy an Arduino or Raspberry Pi boards.
 These are small development kits that include a board with a CPU and many interfaces.
-You can program them by yourself, or download many open-source projects that makes them do something.
+You can program them by yourself or download many open-source projects that makes them do something.
 You can use them for smart house dashboards, a cheap media streamer or even to water your garden.
 You can learn from these projects and maybe create something of your own.
 
