@@ -4,8 +4,8 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - run: apt update
-      - run: apt install python3-sphinx graphviz 
+      - run: apt-get update
+      - run: apt-get install python3-sphinx graphviz 
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: mkdir build
