@@ -1,0 +1,12 @@
+name: Render Site
+on: workflow_dispatch
+jobs:
+  CMake-Configure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: mkdir build
+      - run: cmake -S . -B build -G Ninja
+      - run: cmake --build build -j
+
