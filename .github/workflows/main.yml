@@ -12,7 +12,7 @@ jobs:
       - run: cmake --version
       - run: cmake -S . -B build
       - run: cmake --build build -j
-      - run: tar zcvf build/site.tar.gz -C build/blog
+      - run: tar zcvf build/site.tar.gz -C build/blog/html .
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
