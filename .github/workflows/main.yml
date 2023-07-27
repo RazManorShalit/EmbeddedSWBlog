@@ -4,12 +4,20 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - run: apt-get update
-      - run: apt-get install python3-sphinx graphviz 
+      - run: sudo apt-get update
+      - run: sudo apt-get install python3-sphinx graphviz 
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: mkdir build
       - run: cmake --version
       - run: cmake -S . -B build
       - run: cmake --build build -j
+      - run: tar zxvf build/site.tar.gz -C build/blog
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+           name: github-pages
+           path: build/site.tar.gz
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
 
