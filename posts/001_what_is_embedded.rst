@@ -11,7 +11,7 @@ But actually, in order to run a program, all we need is love, and a processor.
 If we have those two (and the first one is crucial) we can run software.
 Any system that has a processor, but is not a fully featured keyboard-mouse-touchscreen computer, is an embedded system.
 
-Where can we find it?
+Where Can We Find It?
 ---------------------
 Well, if you are not from the field, you will be surprised.
 Your home washing machine has some micro-controller in it, which is a type of processor.
@@ -21,7 +21,7 @@ In order to fix the problem he plugged in a USB disk-on-key that upgraded the wa
 copied the log files and sent them to the manufacturer for review.  Of course, it's not just washing machines.
 Refrigerators, air conditioners, cars, cell phone antennas, all have embedded systems.
 
-Washing machine Vs desktop - Round 1
+Washing Machine Vs Desktop - Round 1
 ------------------------------------
 Because a CPU is a CPU, whether it is in a computer or a washing machine, programming it should be the same.
 But since a washing machine is not a computer, there are some differences.
@@ -65,7 +65,7 @@ That requires your programming language to be very “low level”.
 It will be necessary for the language to have a syntax that allows you to access very specific memory addresses
 and execute very specific assembly instructions.
 
-How to program a washing machine?
+How to Program a Washing Machine?
 ---------------------------------
 So to summarize - an embedded system has very little resources, non-standard hardware and CPU.
 It can't use the very helpful features of interpreted languages like Python.
@@ -74,17 +74,72 @@ sometime C++, although there are exceptions. The software and hardware engineers
 the maximum from the little resources the system has. Personally, I like this challenge.
 It is what this blog is all about.
 
-Do it yourself?
+The Basic Types of Embedded
+---------------------------
+As we briefly saw, the embedded world is very divers. Personally, I like to divide
+embedded projects into 3 major types. Others may think differently, there are no
+hard definitions for this but the main idea is mostly the same.
+
+Bare Metal Programming
+^^^^^^^^^^^^^^^^^^^^^^
+This is for the "crazy" people that like to mess around with bit masks and
+memory mapped hardware registers. With this type of projects you get no abstraction
+to the hardware. You read and write data from hardware devices by writing to specific
+addresses provided by the chip manufacturer of hardware division. This requires reading
+and understanding hardware specifications documents and the willingness to burn
+the occasional board.
+
+Sometimes you will have some abstraction libraries (like `ARM CMSIS <https://www.arm.com/technologies/cmsis>`_),
+but that is very basic. You work on such projects when you have very little resources and you
+have to be as efficient as possible. It allows you to not waist even the little
+space and runtime on redundant functionality, and have full control on how to
+operate the hardware.
+
+Programming With RTOS
+^^^^^^^^^^^^^^^^^^^^^
+RTOS (pronounced Ar-TOS) stands for **R**\ eal **T**\ ime **O**\ perating **S**\ ystem.
+These are very light weight operating systems that provides very little abstraction,
+usually in the task management areas. They have functionality to create tasks, sync and
+schedule them and safely transfer data between them. There is no virtual memory
+or processing isolation like a fully featured OS. Usually you will have to statically
+link with the RTOS like a regular library.
+
+The hardware abstraction is still your job, but you are very likely to find ready-made
+drivers for the specific RTOS you are using. A Notable examples for an RTOS is 
+`free-RTOS <https://www.freertos.org/index.html>`_ but there are many others, 
+all with their pros and cons.
+
+RTOS projects usually have very little resources, but a lot of data handling features
+or different hardware device to manage. A lot of small IOT devices will employ
+an RTOS for easy web and cloud access. A good RTOS can make your life a little easier
+without a lot of cost, but it could be a pain to migrate from a full bare metal
+project to an RTOS. Yet another trade off an engineer has to make, yayiiii.
+
+Embedded Operating Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+These are for monsters IOT devices like home routers or professional security cameras.
+These look and feel like a regular operating system with all the hardware abstraction
+and process management features. The only example I'm familiar with in this area
+is `Embedded Linux <https://elinux.org/Main_Page>`_, but like desktop Linux
+it has many distributions and customization options so not all are the same.
+
+Working with embedded Linux looks and feels mostly like regular Linux. You have
+drivers for most hardware, dynamic linkage, libraries and process management,
+isolation and scheduling.  Large systems with many resources are suitable for this system.
+It could be a good entry point for programmers who wish to start working on an
+embedded project.
+
+Do it Yourself?
 ---------------
 From this post you may get the impression that in order to do embedded programming you have to work for a big company,
 with hardware development capabilities and you can't experiment on your own. Well, that is not entirely true.
 Automotive manufacturers don't bother themselves with developing a CPU for their cars.
 They buy them from someone with a CPU development expertise. Why shouldn't you be able to buy one your self?
 You may think it's expensive, manufacturing takes time, or that is complicated to use.
-That was maybe true 20 years ago. Today you can buy an Arduino or Raspberry Pi boards.
-These are small development kits that include a board with a CPU and many interfaces.
-You can program them by yourself or download many open-source projects that makes them do something.
-You can use them for smart house dashboards, a cheap media streamer or even to water your garden.
+That was maybe true 20 years ago. Today you can buy an `Arduino <https://www.arduino.cc/>`_ for bare metal projects,
+or a `Raspberry Pi <https://www.raspberrypi.org/>`_ very easily.  These are small development kits that include
+a board with a CPU and many interfaces.  You can program them by yourself or download many open-source projects that
+makes them do something.  You can use them for smart house dashboards, a cheap media streamer or even to water your garden.
 You can learn from these projects and maybe create something of your own.
 
 If you are familiar with embedded programming or not, I hope you find what I have to say about it interesting,
