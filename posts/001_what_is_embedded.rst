@@ -3,7 +3,7 @@ I Once Worked on an Embedded Project
 
 What is Embedded Programming?
 -----------------------------
-Usually, when thinking about programming, people think about computers - devices with a keyboard, mouse and a screen.
+Usually, when thinking about programming, people think about computers - devices with a keyboard, a mouse and a screen.
 For the past 10-or-so years we have grown accustomed to our phones being much like computers.
 They are capable of running applications much like a regular laptop is capable.
 The latest phones may even be more powerful than some - not very old - laptops.
@@ -85,7 +85,7 @@ Bare Metal Programming
 This is for the "crazy" people that like to mess around with bit masks and
 memory mapped hardware registers. With this type of projects you get no abstraction
 to the hardware. You read and write data from hardware devices by writing to specific
-addresses provided by the chip manufacturer of hardware division. This requires reading
+addresses provided by the chip manufacturer or your company hardware division. This requires reading
 and understanding hardware specifications documents and the willingness to burn
 the occasional board.
 
@@ -137,7 +137,7 @@ Automotive manufacturers don't bother themselves with developing a CPU for their
 They buy them from someone with a CPU development expertise. Why shouldn't you be able to buy one your self?
 You may think it's expensive, manufacturing takes time, or that is complicated to use.
 That was maybe true 20 years ago. Today you can buy an `Arduino <https://www.arduino.cc/>`_ for bare metal projects,
-or a `Raspberry Pi <https://www.raspberrypi.org/>`_ very easily.  These are small development kits that include
+or a `Raspberry Pi <https://www.raspberrypi.org/>`_ for embedded Linux very easily. These are small development kits that include
 a board with a CPU and many interfaces.  You can program them by yourself or download many open-source projects that
 makes them do something.  You can use them for smart house dashboards, a cheap media streamer or even to water your garden.
 You can learn from these projects and maybe create something of your own.
