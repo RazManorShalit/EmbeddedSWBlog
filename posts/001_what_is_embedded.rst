@@ -85,7 +85,7 @@ Bare Metal Programming
 This is for the "crazy" people that like to mess around with bit masks and
 memory mapped hardware registers. With this type of projects you get no abstraction
 to the hardware. You read and write data from hardware devices by writing to specific
-addresses provided by the chip manufacturer or your company hardware division. This requires reading
+addresses provided by the chip manufacturer or your company's hardware division. This requires reading
 and understanding hardware specifications documents and the willingness to burn
 the occasional board.
 
