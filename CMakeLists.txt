@@ -17,6 +17,6 @@ find_program(SPHINX_EXECUTABLE
 )
 
 add_custom_target(posts ALL
-	${SPHINX_EXECUTABLE} -b html -W ${CMAKE_CURRENT_SOURCE_DIR}/sources ${CMAKE_CURRENT_BINARY_DIR}/blog -d ${CMAKE_CURRENT_BINARY_DIR}/blog/doctrees
+	${SPHINX_EXECUTABLE} -b html -W ${CMAKE_CURRENT_SOURCE_DIR}/sources ${CMAKE_CURRENT_BINARY_DIR}/blog/html -d ${CMAKE_CURRENT_BINARY_DIR}/blog/doctrees
     COMMENT "Building blog posts with Sphinx"
 )
