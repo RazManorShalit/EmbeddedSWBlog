@@ -13,11 +13,10 @@ jobs:
     steps:
       - run: sudo apt-get update
       - run: sudo apt-get install python3 graphviz ninja-build -y
-      - run: mkdir .venv
-      - run: python3 -m venv .venv
-      - run: .venv/bin/pip install -r requirements.txt 
       - name: Check out repository code
         uses: actions/checkout@v3
+      - run: python3 -m venv .venv
+      - run: .venv/bin/pip install -r requirements.txt 
       - run: mkdir build
       - run: cmake --version
       - run: cmake -S . -B build
