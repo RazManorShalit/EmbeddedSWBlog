@@ -21,11 +21,11 @@ introduces the same problem, are called **Bootstrap** problems. In software,
 The process that solves initializing bootstrap problem is called **booting**.
 The software module that does the booting is called **Boot Loader**
 
-Here is another example from the mechanical world - a classic car engine pistol
+Here is another example from the mechanical world - a classic car engine piston
 pulls the fuel into the engine as it moves down and compresses it as it moves up.
-The compression causes the fuel to ignite, which pushes the pistol back down to restart the cycle.
+The compression causes the fuel to ignite, which pushes the piston back down to restart the cycle.
 The up and down moves are what making the wheels spin. When we first start the
-engine, what makes the pistol make it's first move down?
+engine, what makes the piston make it's first move down?
 
 Old cars actually had a manual handle you had to spin by hand in order to start
 the process. Modern cars has a starter - an electronic device capable for emitting
