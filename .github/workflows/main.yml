@@ -19,8 +19,8 @@ jobs:
       - run: .venv/bin/pip install -r requirements.txt 
       - run: mkdir build
       - run: cmake --version
-      - run: cmake -S . -B build
-      - run: cmake --build build -j
+      - run: cmake --preset=blog
+      - run: cmake --build --preset=blog
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Upload Pages artifact
