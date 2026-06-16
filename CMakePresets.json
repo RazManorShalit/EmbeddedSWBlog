@@ -1,0 +1,28 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "blog",
+            "displayName": "Blog",
+            "description": "Configure for the blog",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "environment": {
+                "PATH": "${sourceDir}/.venv/bin:$penv{PATH}",
+                "VIRTUAL_ENV": "${sourceDir}/.venv"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "blog",
+            "displayName": "Blog",
+            "configurePreset": "blog"
+        }
+    ]
+}
